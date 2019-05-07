@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Build started on 'date'
-      - clean install
+      - package
   post_build:
     commands:
       - echo Build completed on 'date'
