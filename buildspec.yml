@@ -9,5 +9,5 @@ pharse:
     commands:
       - echo Build completed on 'date'
 artifacts:
-  files:
-    - target/*.war
+  files: 
+    - '**/*'
