@@ -1,6 +1,11 @@
 version: 0.2
 
-pharse:
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -y maven
   build:
     commands:
       - echo Build started on 'date'
