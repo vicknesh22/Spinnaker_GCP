@@ -4,10 +4,11 @@ pharse:
   build:
     commands:
       - echo Build started on 'date'
-      - mvn package
+      - mvn test
   post_build:
     commands:
       - echo Build completed on 'date'
+      - mvn package
 artifacts:
   files: 
     - '**/*'
