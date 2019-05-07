@@ -11,4 +11,4 @@ pharse:
       - mvn package
 artifacts:
   files: 
-    - '**/*'
+    - '**/*.war'
