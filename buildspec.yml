@@ -4,7 +4,7 @@ pharse:
   build:
     commands:
       - echo Build started on 'date'
-      - mvn deploy
+      - mvn package
   post_build:
     commands:
       - echo Build completed on 'date'
