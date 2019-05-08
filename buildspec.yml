@@ -29,7 +29,7 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    - target/*.*
   discard-paths: yes
 cache:
   paths:
