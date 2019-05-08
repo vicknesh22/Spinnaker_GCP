@@ -1,8 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
 phases:
   install:
     commands:
@@ -20,7 +17,6 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - mvn install
     finally:
       - echo This always runs even if the install command fails
   post_build:
