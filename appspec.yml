@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/application
+hooks:
+  ApplicationStop:
+     - location: script_stop_server.sh
+       timeout: 180
+  Install:
+     - location: script_install.sh
+       timeout: 180
+  ApplicationStart:
+     - location: script_start_server.sh
+       timeout: 180
+  ValidateService:
+     - location: script_validate_application.sh
+timeout: 180
