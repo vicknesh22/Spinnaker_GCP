@@ -13,6 +13,3 @@ hooks:
   ApplicationStart:
      - location: /usr/local/tomcat9/bin/startup.sh
        timeout: 180
-  ValidateService:
-     - location: script_validate_application.sh
-timeout: 180
