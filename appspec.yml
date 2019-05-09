@@ -8,7 +8,7 @@ hooks:
      - location: /usr/local/tomcat9/bin/shutdown.sh
        timeout: 180
   Install:
-     - location: script_install.sh
+     - location: install_script.sh
        timeout: 180
   ApplicationStart:
      - location: /usr/local/tomcat9/bin/startup.sh
