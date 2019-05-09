@@ -7,9 +7,12 @@ hooks:
   ApplicationStop:
      - location: stop_script.sh
        timeout: 180
+       runas: root
   Install:
      - location: install_script.sh
        timeout: 180
+       runas: root
   ApplicationStart:
      - location: start_script.sh
        timeout: 180
+       runas: root
