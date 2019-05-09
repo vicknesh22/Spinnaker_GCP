@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-/usr/local/tomcat9/bin/shutdown.sh
+sudo killall java
+exit 0
