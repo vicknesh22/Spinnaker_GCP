@@ -5,13 +5,13 @@ files:
     destination: /home/ec2-user/application
 hooks:
   ApplicationStop:
-     - location: script_stop_server.sh
+     - location: /usr/local/tomcat9/bin/shutdown.sh
        timeout: 180
   Install:
      - location: script_install.sh
        timeout: 180
   ApplicationStart:
-     - location: script_start_server.sh
+     - location: /usr/local/tomcat9/bin/startup.sh
        timeout: 180
   ValidateService:
      - location: script_validate_application.sh
