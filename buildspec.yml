@@ -16,7 +16,7 @@ phases:
       - echo This always runs even if the install command fails
   post_build:
     commands:
-      - echo Entered the post_build phase...
+      - echo Entered the post_build phase....
       - echo Build completed on `date`
 artifacts:
   files:
