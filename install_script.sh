@@ -2,4 +2,5 @@
 
 mv /home/ec2-user/application/*.zip /usr/local/tomcat9/webapp
 
-unzip /usr/local/tomcat9/webapp/project_test.zip
+cd /usr/local/tomcat9/webapp/
+unzip project_test.zip
