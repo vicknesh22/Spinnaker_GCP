@@ -21,16 +21,9 @@ phases:
 artifacts:
   files:
     - '**/*.war'
+    - '**/*.yml'
+    - '**/*.sh'
   discard-paths: yes
-  secondary-artifacts:
-    artifact1:
-      files:
-        - '**/*.yml'
-      discard-paths: yes
-    artifact2:
-      files:
-        - '**/*.sh'
-      discard-paths: yes
 cache:
   paths:
     - '/root/.m2/**/*'
