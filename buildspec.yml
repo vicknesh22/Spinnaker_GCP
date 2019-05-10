@@ -22,7 +22,6 @@ artifacts:
   files:
     - '**/*.war'
   discard-paths: yes
-artifacts:
   files:
     - '**/*.yml'
   discard-paths: yes
