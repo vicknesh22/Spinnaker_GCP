@@ -341,9 +341,6 @@
 		  		(see example with ValidatorTests) -->
 		    <directory>${project.basedir}/src/test/java</directory>
 		  </testResource>
-		  <testResource>
-		    <directory>${project.basedir}/src/test/resources</directory>
-		  </testResource>
 		</testResources>
 		<plugins>
 			<plugin>
