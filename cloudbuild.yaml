@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
-  args: ['clean install']
+  args: ['install', 'test:skip']
 - name: "gcr.io/gcr.io/cloud-builders/gcloud"
   args:
   - "${_JAVA}"
