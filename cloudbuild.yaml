@@ -1,6 +1,10 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-args:
-- 'build'
-- '--tag=gcr.io/$PROJECT_ID/mypet'
-timeout: 5000s
+- name: "gcr.io/gcr.io/cloud-builders/docker"
+  args:
+  - "${_JAVA}"
+  timeout: 500s
+artifacts:
+  objects:
+    location: "gs://${_BUCKET}/"
+    paths:
+    - "${_CLASS}"
