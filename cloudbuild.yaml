@@ -1,8 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
-- name: gcr.io/cloud-builders/docker
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/myimage', '.']
   timeout: 500s
 artifacts:
   objects:
