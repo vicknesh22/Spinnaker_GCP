@@ -2,11 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
   timeout: 500s
-artifacts:
-  objects:
-    location: "gs://${_BUCKET}/"
-    paths:
-    - "${_CLASS}"
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/my-project/my-image', '.']
   timeout: 500s
