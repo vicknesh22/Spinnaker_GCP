@@ -6,5 +6,5 @@ WORKDIR $CATALINA_HOME
 VOLUME /tmp
 RUN rm -rf /usr/local/tomcat/webapps/*
 EXPOSE 8080
-ADD https://console.cloud.google.com/storage/browser/petclinic_gcp/petclinic.war /usr/local/tomcat/webapps/ROOT.war
+RUN curl https://console.cloud.google.com/storage/browser/petclinic_gcp/petclinic.war /usr/local/tomcat/webapps/ROOT.war
 CMD ["catalina.sh","run"]
