@@ -6,5 +6,5 @@ WORKDIR $CATALINA_HOME
 VOLUME /tmp
 RUN rm -rf /usr/local/tomcat/webapps/*
 EXPOSE 8080
-COPY ./target/*.war /usr/local/tomcat/webapps/app.war
+COPY /workspace/target/*.war /usr/local/tomcat/webapps/app.war
 CMD ["catalina.sh","run"]
