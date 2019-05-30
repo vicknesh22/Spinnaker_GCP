@@ -7,3 +7,11 @@ steps:
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/elite-monolith-240704/my-image']
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/my-project/my-image']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=asia-south1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
+  timeout: 660s
+ 
+
