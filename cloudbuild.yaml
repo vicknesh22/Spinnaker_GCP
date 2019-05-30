@@ -3,6 +3,7 @@ steps:
   args: ['install']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/myfirstproject/my-image', '.']
+  args: ['build', '-t', 'gcr.io/my-project/my-image', '.']
   timeout: 500s
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/myfirstproject/my-image']
