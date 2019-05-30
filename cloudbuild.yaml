@@ -4,7 +4,6 @@ steps:
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/my-project/my-image', '.']
-  args: ['cp', 'gs://petclinic_gcp/petclinic.war', '/usr/local/tomcat/webapps/root.war']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/my-project/my-image']
