@@ -1,12 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
-  args: 
-  mvn clean install-P sonar \
-  - '-Dsonar.host.url=https://sonarcloud.io'
-  - '-Dsonar.login=e9221127d7b0ece4e556578fb4eed4909ceb20b9'
-  - '-Dsonar.projectKey=petclinic_gcp'
-  - '-Dsonar.organization=vicknesh22-github'
-- name: 'gcr.io/cloud-builders/docker'
+  args: ['mvn clean verify-P sonar \  - Dsonar.host.url=https://sonarcloud.io - Dsonar.login=e9221127d7b0ece4e556578fb4eed4909ceb20b9 - Dsonar.projectKey=petclinic_gcp - Dsonar.organization=vicknesh22-github']
   args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
