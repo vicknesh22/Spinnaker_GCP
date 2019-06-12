@@ -2,6 +2,12 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
   timeout: 500s
+- name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
+  args:
+  - '-Dsonar.host.url=http://35.200.190.152/'
+  - '-Dsonar.login=c6df30c02ff0b0278748a4421109d466ab9effdc'
+  - '-Dsonar.projectKey=petclinic'
+  - '-Dsonar.organization=vicknesh22-github'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
   timeout: 500s
