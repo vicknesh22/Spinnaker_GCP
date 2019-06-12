@@ -2,14 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
   timeout: 500s
-  - 'build'
-  - '--build-arg'
-  - 'SONARQUBE_SCANNER_CLI_VERSION=3.2.0.1227'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/sonar-scanner:3.2.0.1227'
-  - '.'
   - '-Dsonar.host.url=https://sonarcloud.io'
   - '-Dsonar.login=e9221127d7b0ece4e556578fb4eed4909ceb20b9'
   - '-Dsonar.projectKey=petclinic_gcp'
