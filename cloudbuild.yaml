@@ -2,6 +2,16 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
   timeout: 500s
+- name: 'gcr.io/cloud-builders/docker'
+  args: 
+  - 'build'
+  - '--build-arg'
+  - 'SONARQUBE_SCANNER_CLI_VERSION=3.2.0.1227'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
+  - '-t'
+  - 'gcr.io/$PROJECT_ID/sonar-scanner:3.2.0.1227'
+  - '.'
 - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
   args:
   - '-Dsonar.host.url=http://35.200.190.152/'
