@@ -4,8 +4,8 @@ steps:
   timeout: 500s
 - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
   args:
-    - '-Dsonar.host.url=http://35.200.190.152/'
-    - '-Dsonar.login=c6df30c02ff0b0278748a4421109d466ab9effdc'
+    - '-Dsonar.host.url=http://sonarcloud.io/'
+    - '-Dsonar.login=ddf62d9752ae13da20242484ff765379fb801fb4'
     - '-Dsonar.projectKey=petclinic'
     - '-Dsonar.organization=vicknesh22-github'
     - '-Dsonar.sources=.'
