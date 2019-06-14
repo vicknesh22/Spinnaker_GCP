@@ -1,8 +1,15 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
-  args: ['mvn install verify-P sonar \  - Dsonar.host.url=https://sonarcloud.io - Dsonar.login=e9221127d7b0ece4e556578fb4eed4909ceb20b9 - Dsonar.projectKey=petclinic_gcp - Dsonar.organization=vicknesh22-github']
-  args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
+  args: ['install']
   timeout: 500s
+- name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
+  args:
+    - '-Dsonar.host.url=http://35.200.190.152/'
+    - '-Dsonar.login=c6df30c02ff0b0278748a4421109d466ab9effdc'
+    - '-Dsonar.projectKey=petclinic'
+    - '-Dsonar.organization=vicknesh22-github'
+    - '-Dsonar.sources=.'
+  args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/elite-monolith-240704/my-image']
 
