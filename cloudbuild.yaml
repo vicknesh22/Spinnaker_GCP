@@ -4,14 +4,11 @@ steps:
   timeout: 500s
 - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
   args:
-  - '-Dsonar.host.url=http://sonarcloud.io/'
-  - '-Dsonar.login=407c15dd683de45e1e17746f23e2571e2d56ae23'
-  - '-Dsonar.projectKey=petclinic_gcp'
-  - '-Dsonar.organization=vicknesh22-github'
+  - '-Dsonar.host.url=http://sonarcloud.io'
+  - '-Dsonar.login={407c15dd683de45e1e17746f23e2571e2d56ae23}'
+  - '-Dsonar.projectKey={petclinic_gcp}'
+  - '-Dsonar.organization={vicknesh22-github}'
   - '-Dsonar.sources=.'
   args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/elite-monolith-240704/my-image']
-
- 
-
