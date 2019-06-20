@@ -10,5 +10,5 @@ steps:
   args: ['install']
   timeout: 500s
   args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image', '.']
- - name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/elite-monolith-240704/my-image']
