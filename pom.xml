@@ -442,6 +442,11 @@
 					<path>/petclinic</path>
 				</configuration>
 			</plugin>
+			<plugin>
+                		<groupId>org.sonarsource.scanner.maven</groupId>
+                		<artifactId>sonar-maven-plugin</artifactId>
+                		<version>3.2.0.1227</version>
+            		</plugin>
 		</plugins>
 	</build>
 
