@@ -4,7 +4,7 @@ steps:
   timeout: 500s
 - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/elite-monolith-240704/my-image:%m%d%y%H%M', '.']
+  args: ['build', '-t', 'gcr.io/elite-monolith-240704/$BUILD_ID', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/elite-monolith-240704/my-image:%m%d%y%H%M']
+  args: ['push', 'gcr.io/elite-monolith-240704/my-image:$BUILD_ID']
