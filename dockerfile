@@ -8,3 +8,6 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 EXPOSE 8080
 COPY target/*.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh","run"]
+ADD VERSION .
+version=`cat VERSION`
+echo "version: $version"
