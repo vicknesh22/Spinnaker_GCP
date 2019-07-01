@@ -7,4 +7,4 @@ steps:
   args: ['build', '-t', 'gcr.io/elite-monolith-240704/$BUILD_ID', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/elite-monolith-240704/my-image:$BUILD_ID']
+  args: ['push', 'gcr.io/elite-monolith-240704/my-image']
