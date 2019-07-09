@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM tomcat:8.0.20-jre8
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
