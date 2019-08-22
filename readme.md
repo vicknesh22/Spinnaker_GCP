@@ -1,4 +1,4 @@
-# web-java-spring-petclinic
+# petclinic
 
 Spring PetClinic Sample Application
 
