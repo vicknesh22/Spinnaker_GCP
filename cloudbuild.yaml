@@ -8,3 +8,4 @@ steps:
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/elite-monolith-240704/my-image']
+##########
